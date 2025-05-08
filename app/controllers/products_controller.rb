@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
+    # @product = Product.find(params[:id])
   end
 
   def edit
@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  def def(new)
+  def new
     @product = Product.new
   end
 
@@ -47,6 +47,6 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.expect(product: [ :name ])
+      params.expect(product: [ :name, :description, :featured_image ])
     end
 end
